@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Events</h1>
+    </header>
+    <section id="events">
+      <h2>Events in Action</h2>
+      <!-- direct code on event -->
+      <button v-on:click="counter++">Add</button>
+      <button v-on:click="counter--">Remove</button>
+
+      <!-- method on event -->
+      <button v-on:click="multiplyCounter">Multiply By 2</button>
+
+      <!-- method on event by arguments-->
+      <button v-on:click="divideBy(5)">Divide By 5</button>
+      <button v-on:click.right="divideBy(5)">Divide By 5 on rightClick</button>
+
+      <p>Result: {{ counter }}</p>
+      
+      <!-- changes should evaluate only once -->
+      <p v-once>Initial: {{ counter }}</p>
+
+      <!-- reserve Name $event for passing this of element-->
+      <input
+        v-on:input="setName($event)"
+        type="text"
+        v-on:keyup.enter="confirmName"
+      />
+      <p>Your Name: {{name}}</p>
+      <p>Confirmed Name: {{confirmedName}}</p>
+
+      <!-- event modifiers -->
+      <!-- submiting form by direct event -->
+      <!-- <form v-on:submit="submitForm">
+          <input type="text" />
+          <button>Sign Up</button>
+        </form> -->
+
+      <!-- event modifier -- modify event behavious -->
+      <form v-on:submit.prevent="submit2">
+        <input type="text" />
+        <button>Sign Up</button>
+      </form>
+    </section>
+  </body>
+</html>
