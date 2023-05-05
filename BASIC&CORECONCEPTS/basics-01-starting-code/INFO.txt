@@ -1,0 +1,3 @@
+#for outputing data in DOM (interpolation)
+only for symentic tags-- not for attributes
+ <p>{{KEY in data function}}</p>
