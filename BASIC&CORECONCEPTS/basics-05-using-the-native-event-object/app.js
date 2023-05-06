@@ -20,7 +20,8 @@ const app = Vue.createApp({
       tasks or calculations like this and call on front.
 
       --for this issue we use computed properties(like useEffect-- execute only dependency changes)
-    */
+      we don't use computed properties for binding methods only to do some caluculation and return the value
+      */
     // outputFullName(){
     //   console.log('executing');
     //   if(this.name == ''){

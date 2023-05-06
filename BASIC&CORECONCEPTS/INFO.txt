@@ -2,6 +2,12 @@
 only for symentic tags-- not for attributes
  <p>{{KEY in data function}}</p>
 
+*data:{return {keys:value}} --->>> data sets we use --- calling {{keyName}}
+
+*computed:{functionName(){return ...}}-->>> for doing calucaltion and showing result. It will only executed again
+only if the dependecy using by its method will changed. -- calling {{functionName}}
+
+*methods:{functionName(){do some change on dataKeys}} --->> for binding with html elements and dataSets
 
 v-bind:attributeName="data" --->>>for binding attribute
 v-on:eventName(click,doubleclick,mouseenter..)="methodName or code To run" --->for binding event
