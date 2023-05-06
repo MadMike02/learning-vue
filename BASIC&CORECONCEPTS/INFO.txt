@@ -5,3 +5,5 @@ only for symentic tags-- not for attributes
 
 v-bind:attributeName="data" --->>>for binding attribute
 v-on:eventName(click,doubleclick,mouseenter..)="methodName or code To run" --->for binding event
+v-model="data Key" -->> double side binding-- data will be send to method and also gets back to input also
+<p v-once>{{some key}}</p> --->>>> will show the initial value of key as it was before changing
