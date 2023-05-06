@@ -24,8 +24,10 @@
       <!-- two way binding i.e. by v-model value will send to method also and gets back in input also -->
       <input type="text" v-model="name">
       <button v-on:click="resetInput">Reset Input</button>
+      <!-- v-on --shorthand- @click.enter="methodName" -->
+      <!-- v-bind --- shorthand- : ex-- :attr="data" -->
       <!-- <p>Your Name: {{ outputFullName() }}</p> -->
-      <p>Your Name: {{ fullname }}</p>
+      <p>Your Name: {{ fullName }}</p>
     </section>
   </body>
 </html>

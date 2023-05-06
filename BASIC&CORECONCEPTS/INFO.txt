@@ -9,6 +9,18 @@ only if the dependecy using by its method will changed. -- calling {{functionNam
 
 *methods:{functionName(){do some change on dataKeys}} --->> for binding with html elements and dataSets
 
+*watch:{propertyName(){...}} -->> modify other things if there will be change on propertName
+
+METHODS-->> use with event binding OR data binding
+	Data binding: Method is executed for every re-render cycle of the component
+	Use for events or data that really needs to be re-evaluated all the time
+COMPUTED--->>> use with data binding
+	These are only re-evaluated if one if their used values changed
+	Use for daa tha depends on other data
+WATCh --->>> Not used directly in template
+	Allows you to run any code in reaction to some changed data(e.g-- HTTp request etc..)
+	Use for any non-data update you want to make
+
 v-bind:attributeName="data" --->>>for binding attribute
 v-on:eventName(click,doubleclick,mouseenter..)="methodName or code To run" --->for binding event
 v-model="data Key" -->> double side binding-- data will be send to method and also gets back to input also

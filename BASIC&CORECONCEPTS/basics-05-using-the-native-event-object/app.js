@@ -2,17 +2,28 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      name: ''
+      name: '',
+      fullName:''
     };
   },
-  computed:{
-    fullname(){
-      console.log('executing');
-      if(this.name == ''){
-        return '';
-      }
-      return this.name+' '+ 'sirname';
+  watch:{
+    //watcher name will be same as the data we want to watch
+    //one method can have only one dependecy
+    name(value1,value2){
+      //value1 --> latest or last value of the property
+      //value2 --> old value of the property
+      this.fullName = value1+ ' ' + 'sirname';
     }
+  },
+  computed:{
+    //can have multiple dependecies , just use reference of that in body
+    // fullname(){
+    //   console.log('executing');
+    //   if(this.name == ''){
+    //     return '';
+    //   }
+    //   return this.name+' '+ 'sirname';
+    // }
   },
   methods: {
     /*outputFullName--->>this method will be executed evertime there will be change in
