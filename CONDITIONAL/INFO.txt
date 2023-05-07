@@ -1,0 +1,19 @@
+---------condition ----
+v-if="data or js code" ex- v-if="data.length === 0"
+v-else-if, v-else -->>> directly comes under element using v-if 
+
+will remove element from DOM
+
+v-show="condition" --->>> one condition and will not remove element from DOM
+
+
+----------------looping----------------
+<li v-for="list in list">{{list}}</li>
+	OR
+<li v-for="(list,index) in list" :key="UNIQUE-KEY">{{list}}</li> 
+use key to distinguish element from each other ----for array
+
+v-for="(value,key,index) in {name:'max',age:31}" --->>>> for object
+
+v-for="num in 10" --->>> repeat 10 times
+
