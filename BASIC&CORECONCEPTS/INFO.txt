@@ -5,7 +5,7 @@ only for symentic tags-- not for attributes
 *data:{return {keys:value}} --->>> data sets we use --- calling {{keyName}}
 
 *computed:{functionName(){return ...}}-->>> for doing calucaltion and showing result. It will only executed again
-only if the dependecy using by its method will changed. -- calling {{functionName}}
+only if the dependecy using by its method will changed. -- calling {{functionName}} (for direct text show) :attributeName=functionName (for attribute binding)
 
 *methods:{functionName(){do some change on dataKeys}} --->> for binding with html elements and dataSets
 
