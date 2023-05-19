@@ -9,7 +9,6 @@
         email-address="manuel@localhost.com"
       ></friend-contact>
       <friend-contact
-        name="Julie Jones"
         phone-number="87878 2222"
         email-address="julie@localhost.com"
       ></friend-contact>
