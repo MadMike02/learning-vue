@@ -2,9 +2,17 @@
   <section>
     <header><h1>My Friends</h1></header>
     <ul>
-    <!-- component imported from main.js -->
-      <friend-contact></friend-contact>
-      <friend-contact></friend-contact>
+      <!-- component imported from main.js -->
+      <friend-contact
+        name="Manuel Lorenz"
+        phone-number="01234 56789"
+        email-address="manuel@localhost.com"
+      ></friend-contact>
+      <friend-contact
+        name="Julie Jones"
+        phone-number="87878 2222"
+        email-address="julie@localhost.com"
+      ></friend-contact>
     </ul>
   </section>
 </template>
@@ -34,13 +42,13 @@ export default {
 
 <!-- css for whole app -->
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -98,5 +106,4 @@ header {
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
-
 </style>

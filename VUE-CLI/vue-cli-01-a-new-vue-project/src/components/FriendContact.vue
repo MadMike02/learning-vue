@@ -1,16 +1,18 @@
 <template>
   <li>
-    <h2>{{ friend.name }}</h2>
+    <h2>{{ name }}</h2>
     <button @click="toggleDetails">{{detailsAreVisible ? "Hide" : "Show"}} Details</button>
     <ul v-if="detailsAreVisible">
-      <li><strong>Phone:</strong>{{ friend.phone }}</li>
-      <li><strong>Email:</strong>{{ friend.email }}</li>
+      <li><strong>Phone:</strong>{{ phoneNumber }}</li>
+      <li><strong>Email:</strong>{{ emailAddress }}</li>
     </ul>
   </li>
 </template>
 
 <script>
 export default {
+  //props define passed from parent-- can be accessed through same as data--props musn't be mutable (change)
+  props:['name','phoneNumber','emailAddress'],
   //only available for this componenet
   data() {
     return {
